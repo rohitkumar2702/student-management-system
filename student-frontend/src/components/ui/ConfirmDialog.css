@@ -1,0 +1,66 @@
+.confirm-dialog {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.confirm-dialog__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.confirm-dialog__icon--danger {
+  background: var(--color-danger-soft);
+  color: var(--color-burgundy);
+  border: 1px solid var(--border-danger);
+}
+
+.confirm-dialog__icon--primary {
+  background: rgba(163, 170, 152, 0.18);
+  color: var(--color-sage-deeper);
+  border: 1px solid var(--border-sage);
+}
+
+.confirm-dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  flex: 1;
+}
+
+.confirm-dialog__title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-dark);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+
+.confirm-dialog__description {
+  font-size: var(--fs-sm);
+  color: var(--color-text-body);
+  line-height: var(--lh-normal);
+}
+
+.confirm-dialog__description strong {
+  color: var(--color-text-dark);
+  font-weight: var(--fw-semibold);
+}
+
+/* Note: Modal already has a title slot; here we suppress the default
+   modal header title to avoid duplicate headings. We pass title only
+   for accessibility via the inner <h2>, and hide the outer header. */
+
+.modal--sm .modal__header {
+  display: none;
+}
+
+.modal--sm .modal__body {
+  padding-top: var(--space-6);
+}
